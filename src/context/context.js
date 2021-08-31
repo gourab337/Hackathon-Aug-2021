@@ -15,7 +15,10 @@ export function ContextProvider({ children }) {
 
   const login = () => auth.signInWithPopup(provider);
 
-  const logout = () => auth.signOut();
+  const logout = () => {
+     auth.signOut();
+     window.location.replace('/');
+  } 
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
