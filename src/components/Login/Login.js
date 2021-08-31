@@ -7,8 +7,6 @@ const Login = () => {
   const { login } = useLocalContext();
   return (
     <div className="login">
-      <img className="login__logo" src={logo} alt="Classroom" />
-
       <Button variant="contained" color="default" onClick={() => login()}>
         Login Now!
       </Button>
